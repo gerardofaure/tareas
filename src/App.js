@@ -8,27 +8,27 @@ function App() {
   const [todos, setTodos] = useState([
     {
       id: 1,
-      title: 'Watch the next Marvel Movie',
+      title: 'Lavar platos',
       completed: false,
     },
     {
       id: 2,
-      title: 'Record the next Video',
+      title: 'Lavar Ropa',
       completed: false,
     },
     {
       id: 3,
-      title: 'Wash the dishes',
+      title: 'Limpiar baños',
       completed: false,
     },
     {
       id: 4,
-      title: 'Study 2 hours',
+      title: 'Doblar la ropa',
       completed: false,
     }
   ])
 
-  const [activeFilter, setActiveFilter] = useState('all');
+  const [activeFilter, setActiveFilter] = useState('All');
 
   const [filteredTodos, setFilteredTodos] = useState(todos);
 
@@ -70,7 +70,7 @@ function App() {
   }
 
   const showAllTodos = () => {
-    setActiveFilter('all')
+    setActiveFilter('All')
   }
 
   const showActiveTodos = () => {
@@ -82,7 +82,7 @@ function App() {
   }
 
   useEffect(() => {
-    if (activeFilter === 'all') {
+    if (activeFilter === 'All') {
       setFilteredTodos(todos);
     } else if (activeFilter === 'active') {
       const activeTodos = todos.filter(todo => todo.completed === false);

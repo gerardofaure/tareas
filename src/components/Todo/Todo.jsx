@@ -1,4 +1,3 @@
-import { useState } from "react";
 
 const Todo = ({ todo, handleSetComplete, handleDelete }) => {
 
